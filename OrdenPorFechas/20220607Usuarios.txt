@@ -1,0 +1,100 @@
+
+usuarios
+
+id nick email password
+1 bcn bcn@awa.cl admin_123
+2 pull pull@ewe.cl qwerty
+3 rocky rock@iwi.cl admin_456
+4 neko nek@owo.cl kuro#
+
+usuarios		
+id	nick	email	password
+1	'abcde'	'abc@awa.cl'	'admin_123'
+2	'pull'	'pull@ewe.cl'	'qwerty'
+3	'rocky'	'rock@iwi.cl'	'admin_456'
+4	'neko'	'nek@owo.cl'	'kuro#'
+
+
+CREATE TABLE IF NOT EXISTS usuarios(
+usuario_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+nick VARCHAR(25) NOT NULL,
+email VARCHAR(25) NOT NULL,
+password VARCHAR(25)NOT NULL
+);
+
+grupos
+id	nombre
+1	matrix
+2	bacanes
+3	pulentos
+
+RELACION MUCHOS A MUCHOS
+
+CREATE TABLE IF NOT EXISTS usuarios(
+grupo_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+nombre VARCHAR(25) NOT NULL
+);
+
+grupos_usuarios
+id pk grupo_id(fk) usaurio_iD fk
+registro grupo usuario
+1 1 1
+1 2 1
+3 2 2
+4 2 3
+5 2 4
+En el ejemplo el grupo 2, tiene a todos los usuarios (1234)
+cliente venta 
+
+ALTER TABLE clientes
+ADD FOREIGN KEY (direccionId) REFERENCES direcciones(id);
+ALTER TABLE CLIENTES
+ADD CONSTRAINT FK_direccionId
+FOREIGN KEY (direccionId) REFERENCES direcciones(id);
+
+Empleados/usuarios
+
+departamentos
+
+dep_emp TABLA RELACIONAL
+emp_no empleados numeros
+dept_no departamento numero
+
+y además se le puede generar
+
+manager
+emp_no
+dept_no
+AÑO MES DIA HORAS MINUTOS SEGUNDOS
+2022-06-07 16:36:22 00:00:00 "Full Stack Java"
+2022-06-07 16:36:23 00:00:00 "Full Stack JavaScript"
+
+CREATE table clientes (
+id int,//se utiliza más el bigint
+nombre varchar2(30) NOT NULL, //asignamos la cantidad de caracteres el MAXIMO 255))
+nombre varchar2(50), //se usa varchar2 en la actualidad
+PRIMARY KEY (id)
+);
+
+select* from NOMBRETABLA; // estructura base donde consultamos la data en la tabla
+* todos los registro // seleccioname todos los registros desde la tabla de cliente
+
+ISERT INTO NOMBRETABLA(columna1, columna2..., columnaN) VALUES (valor1, valor2...valorN);
+
+// el identificador debe ir sí o si el PK
+ctrl+L limpia la terminal
+
+//describe NULL si se asigna YES permite insertar nulo
+
+drop database ejemplo;
+
+//SI NO AGREGAMOS LA K
+
+CREATE table clientes(id int,nombre varchar(30),correo varchar(50),PRIMARY KEY (id));
+
+A través del valor unico en el WHERE VA LA CONDICIÓN
+
+ALTER TABLE nombre_tabla
+ADD nombre_columna
+
+

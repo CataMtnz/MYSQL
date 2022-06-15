@@ -1,0 +1,65 @@
+20220606_Relaciones.sql
+CREAR LAS 4 TABLAS ON REGISTRO 
+
+recomendación PRIMERO QUE NO GUARDE UNA FK
+CREAR TABLAS EN PLURAL
+al ultimo la de alumno
+
+CREATE TABLE registro(
+    id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    codigo_registro varchar(50) NOT NULL,
+    rut varchar(30) NOT NULL
+);
+
+CREATE TABLE curso(
+    id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    nombre varchar(30) NOT NULL,
+    descripcion varchar(50) NOT NULL
+);
+
+CREATE TABLE direccion(
+    id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    nombre varchar(30) NOT NULL,
+    ciudad varchar(30) NOT NULL,
+    region int NOT NULL,
+    pais int NOT NULL
+);
+
+
+TENIENDO EN CUENTA QUE TODO FK DEBE IR NULL
+
+CREATE TABLE alumnos(
+    id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    nombre varchar(50) NOT NULL,
+    apellido varchar(50) NOT NULL,
+    edad int,
+    curso_id int,
+    direccion_id int,
+    registro_id int
+);
+
+
+ALTER TABLE alumnos
+ADD CONSTRAINT FK_direccion_id
+FOREIGN KEY (direccion_id) REFERENCES direcciones1(id)
+ADD CONSTRAINT FK_curso_id
+FOREIGN KEY (curso_id) REFERENCES cursos(id)
+ADD CONSTRAINT FK_registro_id
+FOREIGN KEY (registro_id) REFERENCES registros(id)
+;
+
+
+INSERT INTO registro ( id,codigo_registro,rut)
+VALUES (1, 'Z123', '1234-5'),
+VALUES (2, 'Z456', '1567-k'),
+VALUES (3, 'Z789', '1789-3');
+
+INSERT INTO curso ( id int, nombre ,descripcion)
+VALUES (2, 'Joao', 'G1 sentencias'),
+VALUES (5, 'Ignacio', 'G2 sql'),
+VALUES (1, 'Cata', 'do while');
+
+INSERT INTO direccion (id int, ciudad varchar(30) NOT NULL, region int NOT NULL, pais int NOT NULL)
+VALUES (1, 'La Dehesa', 'G1 sentencias'),
+VALUES (2, 'Recoleta', 'G2 sql'),
+VALUES (3, 'Conchali', 'do while');
