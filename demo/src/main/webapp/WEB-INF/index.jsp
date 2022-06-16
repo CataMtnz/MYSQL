@@ -11,12 +11,8 @@
 
         <body>
             <h1>Hola
-                <c:out value="${nombres}"></c:out>
-                <c:out value="${apellidos}"></c:out>
-                <c:out value="${edad}"></c:out>
             </h1>
             </p>>
-            <c:out value="${usuario.nombre} ${usuario.getApellido()}"></c:out>
             <br>
 
             </p>>
