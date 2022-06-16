@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.generation.models.Usuario;
 import com.generation.services.UsuarioService;
 
+
 @Controller
 @RequestMapping("/registro")
 public class RegistroController {

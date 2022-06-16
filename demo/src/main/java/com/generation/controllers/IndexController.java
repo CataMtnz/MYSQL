@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.generation.models.Usuario;
+import com.generation.services.UsuarioService;
 
 @Controller
 public class IndexController  {
@@ -18,10 +19,12 @@ public class IndexController  {
         model.addAttribute("name", 25);
         
         
-        Usuario usuario = new Usuario("Michi", "Leonidas", 8, "LaContraseña");
+        /*Usuario usuario = new Usuario("Michi", "Leonidas", 8, "LaContraseña");
         //pasando el objeto a la vista JSP
         model.addAttribute("usuario", usuario);
         System.out.println(usuario.getNombre());
+        */
         return "index.jsp";
+
     }
 }
