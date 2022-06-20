@@ -24,6 +24,9 @@ public class AutoService {
             return autoRepository.findAll();
 
         }
+        public Auto buscarId(Long id) {
+            return autoRepository.findById(id).get();
+        }
 
     }
 

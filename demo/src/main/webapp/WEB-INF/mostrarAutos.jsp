@@ -25,6 +25,7 @@
                                 <th scope="col">Cantidad de puertas</th>
                                 <th scope="col">Cantidad de ruedas</th>
                                 <th scope="col">Dueño</th>
+                                <th scope="col">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -37,6 +38,8 @@
                                     <td>${auto.cantidadPuerta}</td>
                                     <td>${auto.cantidadRueda}</td>
                                     <td>${auto.dueno}</td>
+                                    <td><a class="btn btn-warning" href="/auto/editar/${auto.id}" role="button">Editar</a></td>
+                                    <td><a class="btn btn-danger" href="/auto/eliminar/${auto.id}" role="button">Eliminar</a></td>
                                 </tr>
                             </c:forEach>
                         </tbody>
