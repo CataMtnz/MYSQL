@@ -27,6 +27,9 @@ public class AutoService {
         public Auto buscarId(Long id) {
             return autoRepository.findById(id).get();
         }
+        public void eliminarPorId(Long id) {
+            autoRepository.deleteById(id);
+        }
 
     }
 

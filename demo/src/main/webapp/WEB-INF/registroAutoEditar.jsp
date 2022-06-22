@@ -40,7 +40,9 @@
                         <br>
                         <br>
                         <button type="submit" class="btn btn-outline-warning">Editar Auto</button>
-
+                        <br>
+                        <br>
+                        <button type="submit" class="btn btn-outline-danger">Elimnar Auto</button>
                     </form:form>
 
                 </div>

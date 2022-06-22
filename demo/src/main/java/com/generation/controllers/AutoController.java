@@ -92,8 +92,8 @@ public class AutoController {
         }
 
         @RequestMapping("/eliminar/{id}")
-            public String eliminar(@PathVariable("id")Long id){
-                System.out.println("el id a eliminar es: " +id );
-                return "";
+    public String eliminar(@PathVariable("id")Long id, Model model){
+        autoService.eliminarPorId(id);
+        return "redirect:/auto/mostrar";
         }
         }
